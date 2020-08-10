@@ -12,16 +12,16 @@ nav > span {
 	margin: 1.5em;
 }
 
-.nav-logo {
+.nav_logo {
 	font-family: 'Bungee', cursive;
 	font-size: 2rem;
 }
 
-.nav-write {
+.nav_write {
 	font-size: 1.2rem;
 }
 
-.nav-tweet {
+.nav_tweet {
 	font-family: 'Bungee Hairline', cursive;
 	font-size: 0.9rem;
 }
