@@ -2,6 +2,10 @@
 	margin-top: 2rem;
 }
 
+.new-tweet {
+	margin-bottom: 2rem;
+}
+
 #tweet-text {
 	border: none;
 	border-bottom: 4px solid black;
