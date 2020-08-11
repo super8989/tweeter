@@ -35,7 +35,7 @@
 	font-size: 0.8rem;
 	padding: 0.6rem;
 	cursor: pointer;
-	box-shadow: 3px 5px 9px 0px rgba(0, 0, 0, 0.43);
+	box-shadow: 1px 5px 9px 0px rgba(0, 0, 0, 0.43);
 	outline: none;
 }
 
@@ -45,6 +45,7 @@
 
 .tweet-text_submit button:active {
 	transform: translateY(2px);
+	box-shadow: none;
 }
 
 .tweet-text_submit .counter {
