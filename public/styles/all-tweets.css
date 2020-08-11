@@ -6,6 +6,7 @@
 
 .all-tweets_box:hover {
 	box-shadow: 10px 10px 3px 1px rgba(0, 0, 0, 0.5);
+	transition: box-shadow 0.1s ease-in;
 	transform: translateY(-1px);
 }
 
