@@ -1,0 +1,69 @@
+.all-tweets_box {
+	border: 3px solid black;
+	padding: 1rem;
+	margin-bottom: 10rem;
+}
+
+.all-tweets_box:hover {
+	box-shadow: 10px 10px 3px 1px rgba(0, 0, 0, 0.5);
+	transform: translateY(-1px);
+}
+
+#all-tweets header {
+	display: flex;
+	align-items: center;
+}
+
+.all-tweets_avatar {
+	margin: 0 0.5rem 0 0;
+}
+
+.all-tweets_profile-handle {
+	margin-left: auto;
+	color: darkgrey;
+	opacity: 0;
+}
+
+.all-tweets_box:hover .all-tweets_profile-handle {
+	animation-name: textAppear;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes textAppear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.all-tweets_form textarea {
+	border: none;
+	border-bottom: 4px solid black;
+	background-color: inherit;
+	resize: none;
+	width: 100%;
+	outline: none;
+}
+
+#all-tweets footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+}
+
+.all-tweets_publish-date {
+	font-size: 0.8rem;
+	margin: 0 0 0 1rem;
+}
+
+.all-tweets_icons {
+	font-size: 1rem;
+	color: #344785;
+}
+
+.all-tweets_icons i {
+	margin: 0 0.3rem;
+}
