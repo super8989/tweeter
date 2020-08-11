@@ -5,12 +5,14 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	font-family: 'Bungee', cursive;
+	padding: 0 3rem;
 }
 
-nav > span {
+/* nav > span {
 	font-family: 'Bungee', cursive;
 	margin: 1.5em;
-}
+} */
 
 .nav_logo {
 	font-family: 'Bungee', cursive;
@@ -19,9 +21,19 @@ nav > span {
 
 .nav_write {
 	font-size: 1.2rem;
+	margin-right: 0.3rem;
 }
 
-.nav_tweet {
+.nav_new-tweet {
 	font-family: 'Bungee Hairline', cursive;
-	font-size: 0.9rem;
+	font-size: 1rem;
+}
+
+.nav_write-arrow {
+	font-size: 2rem;
+	display: block;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	transform: rotate(90deg);
+	color: #bf0000;
 }
