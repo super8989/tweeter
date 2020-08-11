@@ -1,31 +1,31 @@
-.all-tweets_box {
+.tweet_box {
 	border: 3px solid black;
 	padding: 1rem;
 	margin-bottom: 10rem;
 }
 
-.all-tweets_box:hover {
+.tweet_box:hover {
 	box-shadow: 10px 10px 3px 1px rgba(0, 0, 0, 0.5);
 	transition: 0.2s ease-in;
 	transform: translateY(-2px);
 }
 
-#all-tweets header {
+#tweets-container header {
 	display: flex;
 	align-items: center;
 }
 
-.all-tweets_avatar {
+.tweet_avatar {
 	margin: 0 0.5rem 0 0;
 }
 
-.all-tweets_profile-handle {
+.tweet_handle {
 	margin-left: auto;
 	color: darkgrey;
 	opacity: 0;
 }
 
-.all-tweets_box:hover .all-tweets_profile-handle {
+.tweet_box:hover .tweet_handle {
 	animation-name: textAppear;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
@@ -40,22 +40,22 @@
 	}
 }
 
-#all-tweets footer {
+#tweets-container footer {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 0.5rem;
 }
 
-.all-tweets_publish-date {
+.tweet_publish-date {
 	font-size: 0.8rem;
 	margin: 0 0 0 1rem;
 }
 
-.all-tweets_icons {
+.tweet_icons {
 	font-size: 1rem;
 	color: #344785;
 }
 
-.all-tweets_icons i {
+.tweet_icons i {
 	margin: 0 0.3rem;
 }
