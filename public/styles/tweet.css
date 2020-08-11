@@ -1,7 +1,7 @@
 .tweet_box {
 	border: 3px solid black;
 	padding: 1rem;
-	margin-bottom: 10rem;
+	margin-bottom: 2rem;
 }
 
 .tweet_box:hover {
@@ -48,7 +48,7 @@
 	margin-top: 0.5rem;
 }
 
-.tweet_publish-date {
+.tweet_created-at {
 	font-size: 0.8rem;
 	margin: 0 0 0 1rem;
 }
