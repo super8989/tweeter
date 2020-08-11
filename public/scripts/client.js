@@ -30,7 +30,7 @@ $(document).ready(function () {
         </header>
         <p>${tweetObj.content.text}</p>
         <footer>
-          <span class="tweet_publish-date">${daysAgo(tweetObj.created_at)} Days ago</span>
+          <span class="tweet_created-at">${moment(tweetObj.created_at).fromNow()}</span>
           <div class='tweet_icons'>
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
