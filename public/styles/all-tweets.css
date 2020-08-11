@@ -6,7 +6,7 @@
 
 .all-tweets_box:hover {
 	box-shadow: 10px 10px 3px 1px rgba(0, 0, 0, 0.5);
-	transition: box-shadow 0.1s ease-in;
+	transition: 0.2s ease-in;
 	transform: translateY(-2px);
 }
 
@@ -27,7 +27,7 @@
 
 .all-tweets_box:hover .all-tweets_profile-handle {
 	animation-name: textAppear;
-	animation-duration: 0.6s;
+	animation-duration: 1s;
 	animation-fill-mode: forwards;
 }
 
