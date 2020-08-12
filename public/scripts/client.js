@@ -16,6 +16,12 @@ $(document).ready(function () {
 		return;
 	};
 
+	const escape = function (str) {
+		let div = document.createElement('div');
+		div.appendChild(document.createTextNode(str));
+		return div.innerHTML;
+	};
+
 	// Render a new tweet
 	const createTweetElement = (tweetObj) => {
 		const $tweet = `<article class='tweet_box'>
@@ -23,7 +29,7 @@ $(document).ready(function () {
           <img class='tweet_avatar' src='${tweetObj.user.avatars}' alt='avatar'><span>${tweetObj.user.name}</span>
           <span class='tweet_handle'>${tweetObj.user.handle}</span>
         </header>
-        <p>${tweetObj.content.text}</p>
+        <p>${escape(tweetObj.content.text)}</p>
         <footer>
           <span class="tweet_created-at">${moment(tweetObj.created_at).fromNow()}</span>
           <div class='tweet_icons'>
