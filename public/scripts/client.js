@@ -17,10 +17,10 @@ $(document).ready(function () {
 		created_at: 1461116232227,
 	};
 
-	const daysAgo = (createdAt) => {
-		const curTime = new Date().getTime();
-		return Math.floor((curTime - createdAt) / (60 * 60 * 24 * 1000));
-	};
+	// const daysAgo = (createdAt) => {
+	// 	const curTime = new Date().getTime();
+	// 	return Math.floor((curTime - createdAt) / (60 * 60 * 24 * 1000));
+	// };
 
 	const createTweetElement = (tweetObj) => {
 		return `<article class='tweet_box'>
