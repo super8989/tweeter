@@ -81,6 +81,3 @@ $(document).ready(function () {
 
 	loadTweets();
 });
-
-// Question about the logic of slideToggle class ---> am i doing it right? having hidden class toggled with every click
-// how to reset slideToggle after validation so error message doesn't persist
