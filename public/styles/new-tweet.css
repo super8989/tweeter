@@ -20,6 +20,18 @@
 	font-weight: bold;
 }
 
+.error-text-show {
+	color: #cc0033;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.error-length-show {
+	color: #cc0033;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
 .tweet-text_submit {
 	margin-top: 1rem;
 	display: flex;
