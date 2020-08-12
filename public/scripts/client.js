@@ -8,8 +8,10 @@ $(document).ready(function () {
 
 	// loop through tweets and append the return value to tweets container
 	const renderTweets = function (tweets) {
+		$('#tweets-container').empty();
+
 		for (let tweet of tweets) {
-			$('#tweets-container').append(createTweetElement(tweet));
+			$('#tweets-container').prepend(createTweetElement(tweet));
 		}
 		return;
 	};
@@ -35,6 +37,18 @@ $(document).ready(function () {
 		return $tweet;
 	};
 
+	// Fetch tweets from the server
+	const loadTweets = function () {
+		// $.get('/tweets', function (data, status) {renderTweets(data); });
+
+		$.ajax({
+			url: '/tweets',
+			method: 'GET',
+		}).then((response) => {
+			renderTweets(response);
+		});
+	};
+
 	// Submit a new tweet to db
 	$('#new-tweet_form').submit(function (event) {
 		event.preventDefault();
@@ -44,37 +58,16 @@ $(document).ready(function () {
 		} else if ($('#tweet-text').val().length > 140) {
 			alert('Tweet exceeded maximum character count!');
 		} else {
-			const form_data = $(this).serialize();
-
-			$.post('/tweets', form_data).done((response) => {
-				console.log('response:', response);
+			// $.post('/tweets', form_data).done();
+			$.ajax({
+				url: '/tweets',
+				type: 'POST',
+				data: $(this).serialize(),
+			}).then(function () {
+				loadTweets();
 			});
 		}
 	});
-
-	// This is using an ajax method
-	// const post_url = $(this).attr('action');
-	// const request_method = $(this).attr('method');
-	// const form_data = $(this).serialize();
-
-	// $.ajax({
-	// 	url: post_url,
-	// 	type: request_method,
-	// 	data: form_data,
-	// })
-	// 	.then(function (response) {
-	// 		console.log('Sucess: ', response);
-	// 	})
-	// 	.catch((err) => {
-	// 		console.error(err);
-	// 	});
-
-	// Fetch tweets from the server
-	const loadTweets = function () {
-		$.get('/tweets', function (data, status) {
-			renderTweets(data);
-		});
-	};
 
 	loadTweets();
 });
