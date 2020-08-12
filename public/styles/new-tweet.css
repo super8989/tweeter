@@ -21,23 +21,10 @@
 }
 
 .error-text {
-	display: none;
 	color: #cc0033;
 	font-size: 1rem;
 	font-weight: bold;
 	margin-left: 1rem;
-}
-
-.error-length {
-	display: none;
-	color: #cc0033;
-	font-size: 1rem;
-	font-weight: bold;
-	margin-left: 1rem;
-}
-
-.show {
-	display: unset;
 }
 
 .tweet-text_submit {

@@ -56,8 +56,7 @@ $(document).ready(function () {
 	};
 
 	$('#tweet-text').click(function () {
-		$('.error-text').removeClass('show');
-		$('.error-length').removeClass('show');
+		$('.error-text').empty();
 	});
 
 	// Submit a new tweet to db
@@ -65,9 +64,9 @@ $(document).ready(function () {
 		event.preventDefault();
 
 		if (!$('#tweet-text').val()) {
-			$('.error-text').addClass('show');
+			$('.error-text').text('Tweet Something!');
 		} else if ($('#tweet-text').val().length > 140) {
-			$('.error-length').addClass('show');
+			$('.error-text').text("You've got too much on your mind!");
 		} else {
 			// $.post('/tweets', form_data).done();
 			$.ajax({
