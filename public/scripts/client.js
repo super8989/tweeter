@@ -40,7 +40,7 @@ $(document).ready(function () {
 	};
 
 	const createTweetElement = (tweetObj) => {
-		let $tweet = `<article class='tweet_box'>
+		const $tweet = `<article class='tweet_box'>
         <header>
           <img class='tweet_avatar' src='${tweetObj.user.avatars}' alt='avatar'><span>${tweetObj.user.name}</span>
           <span class='tweet_handle'>${tweetObj.user.handle}</span>
@@ -60,4 +60,29 @@ $(document).ready(function () {
 	};
 
 	renderTweets(data);
+
+	$('#new-tweet_form').submit(function (event) {
+		event.preventDefault();
+		const post_url = $(this).attr('action');
+		const request_method = $(this).attr('method');
+		const form_data = $(this).serialize();
+		console.log(form_data);
+
+		$.post('/tweets', form_data).done((response) => {
+			console.log(response);
+		});
+
+		// This is using an ajax method
+		// $.ajax({
+		// 	url: post_url,
+		// 	type: request_method,
+		// 	data: form_data,
+		// })
+		// 	.then(function (response) {
+		// 		console.log('Sucess: ', response);
+		// 	})
+		// 	.catch((err) => {
+		// 		console.error(err);
+		// 	});
+	});
 });
