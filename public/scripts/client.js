@@ -14,6 +14,7 @@ $(document).ready(function () {
 		return;
 	};
 
+	// Render a new tweet
 	const createTweetElement = (tweetObj) => {
 		const $tweet = `<article class='tweet_box'>
         <header>
@@ -34,34 +35,43 @@ $(document).ready(function () {
 		return $tweet;
 	};
 
+	// Submit a new tweet to db
 	$('#new-tweet_form').submit(function (event) {
 		event.preventDefault();
-		const post_url = $(this).attr('action');
-		const request_method = $(this).attr('method');
-		const form_data = $(this).serialize();
-		console.log(form_data);
 
-		$.post('/tweets', form_data).done((response) => {
-			console.log(response);
-		});
+		if (!$('#tweet-text').val()) {
+			alert('Tweet something!');
+		} else if ($('#tweet-text').val().length > 140) {
+			alert('Tweet exceeded maximum character count!');
+		} else {
+			const form_data = $(this).serialize();
 
-		// This is using an ajax method
-		// $.ajax({
-		// 	url: post_url,
-		// 	type: request_method,
-		// 	data: form_data,
-		// })
-		// 	.then(function (response) {
-		// 		console.log('Sucess: ', response);
-		// 	})
-		// 	.catch((err) => {
-		// 		console.error(err);
-		// 	});
+			$.post('/tweets', form_data).done((response) => {
+				console.log('response:', response);
+			});
+		}
 	});
 
+	// This is using an ajax method
+	// const post_url = $(this).attr('action');
+	// const request_method = $(this).attr('method');
+	// const form_data = $(this).serialize();
+
+	// $.ajax({
+	// 	url: post_url,
+	// 	type: request_method,
+	// 	data: form_data,
+	// })
+	// 	.then(function (response) {
+	// 		console.log('Sucess: ', response);
+	// 	})
+	// 	.catch((err) => {
+	// 		console.error(err);
+	// 	});
+
+	// Fetch tweets from the server
 	const loadTweets = function () {
 		$.get('/tweets', function (data, status) {
-			console.log('data', data, 'status', status);
 			renderTweets(data);
 		});
 	};
