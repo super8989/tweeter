@@ -55,14 +55,19 @@ $(document).ready(function () {
 		});
 	};
 
+	$('#tweet-text').click(function () {
+		$('.error-text').removeClass('show');
+		$('.error-length').removeClass('show');
+	});
+
 	// Submit a new tweet to db
 	$('#new-tweet_form').submit(function (event) {
 		event.preventDefault();
 
 		if (!$('#tweet-text').val()) {
-			alert('Tweet something!');
+			$('.error-text').addClass('show');
 		} else if ($('#tweet-text').val().length > 140) {
-			alert('Tweet exceeded maximum character count!');
+			$('.error-length').addClass('show');
 		} else {
 			// $.post('/tweets', form_data).done();
 			$.ajax({
@@ -77,3 +82,6 @@ $(document).ready(function () {
 
 	loadTweets();
 });
+
+// Question about the logic of slideToggle class ---> am i doing it right? having hidden class toggled with every click
+// how to reset slideToggle after validation so error message doesn't persist

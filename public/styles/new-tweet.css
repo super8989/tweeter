@@ -20,22 +20,30 @@
 	font-weight: bold;
 }
 
-.error-text-show {
+.error-text {
+	display: none;
 	color: #cc0033;
 	font-size: 1rem;
 	font-weight: bold;
+	margin-left: 1rem;
 }
 
-.error-length-show {
+.error-length {
+	display: none;
 	color: #cc0033;
 	font-size: 1rem;
 	font-weight: bold;
+	margin-left: 1rem;
+}
+
+.show {
+	display: unset;
 }
 
 .tweet-text_submit {
 	margin-top: 1rem;
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
 }
 
 .tweet-text_submit button {
@@ -61,6 +69,7 @@
 }
 
 .tweet-text_submit .counter {
+	margin-left: auto;
 	font-family: 'Bungee', cursive;
 	color: #444444;
 }

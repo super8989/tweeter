@@ -57,11 +57,11 @@
     <section class="new-tweet">
       <form id='new-tweet_form' method="POST" action='/tweets'>
         <textarea name="text" id="tweet-text" rows='1' placeholder='What are you humming about?'></textarea>
-        <span class="error-text">Tweet Something!</span>
-        <span class="error-length">Uh oh... You've got too much on your mind!</span>
 
         <div class='tweet-text_submit'>
           <button type="submit">Tweet</button>
+          <span class="error-text">Tweet Something!</span>
+          <span class="error-length">Uh oh... You've got too much on your mind!</span>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
