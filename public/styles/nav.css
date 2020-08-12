@@ -27,6 +27,11 @@ nav {
 	font-size: 2rem;
 }
 
+.nav_new-tweet-box {
+	display: flex;
+	flex-direction: column;
+}
+
 .nav_write {
 	font-size: 1.2rem;
 	margin-right: 0.3rem;
@@ -38,10 +43,23 @@ nav {
 }
 
 .nav_write-arrow {
-	font-size: 2rem;
-	display: block;
+	font-size: 1.5rem;
 	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
-	transform: rotate(90deg);
-	color: #bf0000;
+	color: #e71616;
+	margin-top: 0.3rem;
+	animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(10px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
 }
