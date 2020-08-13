@@ -5,6 +5,7 @@
  */
 html {
 	box-sizing: border-box;
+	overscroll-behavior: none;
 }
 *,
 *:before,
@@ -21,6 +22,7 @@ body {
 	background-color: #f4f1ec;
 	font-size: 24px;
 	font-family: 'Source Sans Pro', sans-serif;
+	overscroll-behavior: none;
 }
 
 /*
@@ -30,4 +32,20 @@ body {
 	width: 90%;
 	margin: auto;
 	background-color: inherit;
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		display: flex;
+		margin-top: 120px;
+	}
+
+	.header {
+		width: 50% !important;
+		margin: 0 6rem 0 4rem;
+	}
+
+	.container {
+		margin: 0 4rem;
+	}
 }
