@@ -49,12 +49,12 @@
 .tweet-text_submit button:hover {
 	background-color: #344785;
 	transition: 0.2s;
-	transform: translateY(-2px);
+	transform: translateY(-1px);
 	box-shadow: 2px 4px 8px 4px rgba(0, 0, 0, 0.43);
 }
 
 .tweet-text_submit button:active {
-	transform: translateY(2px);
+	transform: translateY(1px);
 	box-shadow: none;
 }
 
