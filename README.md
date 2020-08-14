@@ -26,6 +26,6 @@ A simple single-page AJAX-based Twitter close built using HTML5, CSS3, JS and jQ
 
 ## Final Product
 
-!["screenshot of desktop page"]()
+!["screenshot of desktop page"](https://github.com/super8989/tweeter/blob/master/docs/desktop.png?raw=true)
 
-!["screenshot of mobile page"]()
+!["screenshot of mobile page"](https://github.com/super8989/tweeter/blob/master/docs/mobile.png?raw=true)
