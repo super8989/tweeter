@@ -8,12 +8,16 @@ A simple single-page AJAX-based Twitter clone built using HTML5, CSS3, JS and jQ
 - User can submit tweets: form validation enabled
 - User can browse all tweets in reverse-chronological order
 
-## Getting Started
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+
+## Final Product
+
+!["screenshot of desktop page"](https://github.com/super8989/tweeter/blob/master/docs/desktop.png?raw=true)
+
+!["screenshot of mobile page"](https://github.com/super8989/tweeter/blob/master/docs/mobile.png?raw=true)
+
+
+
 
 ## Dependencies
 
@@ -24,8 +28,9 @@ A simple single-page AJAX-based Twitter clone built using HTML5, CSS3, JS and jQ
 - Md5
 - moment
 
-## Final Product
+## Getting Started
 
-!["screenshot of desktop page"](https://github.com/super8989/tweeter/blob/master/docs/desktop.png?raw=true)
-
-!["screenshot of mobile page"](https://github.com/super8989/tweeter/blob/master/docs/mobile.png?raw=true)
+1. Fork this repository, then clone your fork of this repository.
+2. Install dependencies using the `npm install` command.
+3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+4. Go to <http://localhost:8080/> in your browser.
