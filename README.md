@@ -1,6 +1,6 @@
 # Tweeter Project
 
-A simple single-page AJAX-based Twitter close built using HTML5, CSS3, JS and jQuery to practice front-end with pre-built Node, Express and MongoDB on the back-end.
+A simple single-page AJAX-based Twitter clone built using HTML5, CSS3, JS and jQuery to practice front-end with pre-built Node, Express and MongoDB on the back-end.
 
 ## Features
 
